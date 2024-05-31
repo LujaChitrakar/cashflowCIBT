@@ -1,19 +1,15 @@
-import "./App.css";
-import Footer from "./Components/common/Footer";
-import Navbar from "./Components/common/Navbar";
-import Sidebar from "./Components/common/Sidebar";
-import Homepage from "./Page/Homepage";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/page/Layout";
+import Dashboard from "./components/page/Dashboard";
 
 function App() {
   return (
-    <>
-      <div className="wrapper">
-        <Navbar />
-        <Sidebar />
-        <Homepage />
-        <Footer />
-      </div>
-    </>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+    </Layout>
   );
 }
 
